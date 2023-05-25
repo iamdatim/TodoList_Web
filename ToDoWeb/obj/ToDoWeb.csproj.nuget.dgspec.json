@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\ToDoWeb.csproj": {}
+    "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\ToDoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\ToDoWeb.csproj": {
+    "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\ToDoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\ToDoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\ToDoWeb.csproj",
         "projectName": "ToDoWeb",
-        "projectPath": "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\ToDoWeb.csproj",
+        "projectPath": "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\ToDoWeb.csproj",
         "packagesPath": "C:\\Users\\Dairo.T\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\obj\\",
+        "outputPath": "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z3Y2MLgE4ljoBfUM5puhvX5af2Y24RT57GZ/+5+KQyqRLIvKiil7YRqNtt0D0qJFksd9rNpoPGLXsXqREJEm+w==",
+  "dgSpecHash": "Pa8x1t773WBWrynxMSXd4moYFhahIZa3T/r8hkc38Hbk0ymZ4YWZ2lq0WYKDuqKTWbNQrxFfE5my0OLcO9z54g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dairo.T\\Desktop\\mvc\\ToDoWeb\\ToDoWeb\\ToDoWeb.csproj",
+  "projectFilePath": "C:\\Users\\Dairo.T\\Source\\Repos\\TodoList_Web\\ToDoWeb\\ToDoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dairo.T\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Dairo.T\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
