@@ -1,0 +1,29 @@
+﻿
+
+<p>@TempData["SuccessMessage"]</p>
+
+<h2 class="text-primary"> Login Page</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p>@ViewBag.ErrorMessage</p>
+}
+<form method="post" action="@Url.Action("Todolist", "Todo")">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" class="form-control" />
+    </div>
+
+  @*  <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+*@
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="form-control" />
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-outline-primary" style="width:150px">Login</button>
+</form>
