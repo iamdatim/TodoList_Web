@@ -591,8 +591,6 @@ C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microso
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -671,14 +669,11 @@ C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microso
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Features.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.Configuration.dll
@@ -1137,3 +1132,10 @@ C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\obj\Debug\net6.0\refint\ToDoW
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\obj\Debug\net6.0\ToDoWeb.pdb
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\obj\Debug\net6.0\ToDoWeb.genruntimeconfig.cache
 C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\obj\Debug\net6.0\ref\ToDoWeb.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Dairo.T\Source\Repos\TodoList_Web\ToDoWeb\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
