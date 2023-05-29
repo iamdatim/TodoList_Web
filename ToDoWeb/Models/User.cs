@@ -4,6 +4,7 @@ namespace ToDoWeb.Models
 {
     public class User
     {
+        [Key]
         public Guid ID { get; set; } = Guid.NewGuid();
         [Required]
         public string Fullname { get; set; } = string.Empty;

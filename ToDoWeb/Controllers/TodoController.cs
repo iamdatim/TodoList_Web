@@ -31,7 +31,7 @@ namespace ToDoWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Todo obj, User user)
         {
-            obj.UserId = user.ID;
+           // obj.UserId = user.ID;
             _db.ToDoList.Add(obj);
             _db.SaveChanges();
             return RedirectToAction("Todolist");
