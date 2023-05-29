@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ToDoWeb.Data;
 using ToDoWeb.Models;
 
@@ -35,6 +36,42 @@ namespace ToDoWeb.Controllers
             _db.ToDoList.Add(obj);
             _db.SaveChanges();
             return RedirectToAction("Todolist");
-        } 
+        }
+
+        public async Task<IActionResult> Delete(Guid? id)
+        {
+            if (id == null || _db.ToDoList == null)
+            {
+                return NotFound();
+            }
+
+            var todo = await _db.ToDoList
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            return View(todo);
+        }
+
+        // POST: Todo/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        {
+            if (_db.ToDoList == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.ToDoList'  is null.");
+            }
+            var todo = await _db.ToDoList.FindAsync(id);
+            if (todo != null)
+            {
+                _db.ToDoList.Remove(todo);
+            }
+
+            await _db.SaveChangesAsync();
+            return RedirectToAction(nameof(Todolist));
+        }
     }
 }

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Dairo.T/Source/Repos/TodoList_Web/ToDoWeb/Views/Todo/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Dairo.T/Source/Repos/TodoList_Web/ToDoWeb/Views/Todo/Todolist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9kb1xUb2RvbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
