@@ -24,7 +24,7 @@
         </thead>
 
         <tbody>
-            @foreach (var obj in Model)
+           @* @foreach (var obj in Model)
             {
                 <tr>
                     <td width="10%">
@@ -47,7 +47,40 @@
                         @obj.PriorityLevel
                     </td>
                 </tr>
+            }*@
+
+            @{
+                int counter = 1;
             }
+
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td width="10%">
+                        @counter
+                    </td>
+
+                    <td width="20%">
+                        @obj.Title
+                    </td>
+
+                    <td width="45%">
+                        @obj.Description
+                    </td>
+
+                    <td width="10%">
+                        @obj.DueDate
+                    </td>
+
+                    <td width="15%">
+                        @obj.PriorityLevel
+                    </td>
+                </tr>
+
+                counter++;
+            }
+
+
         </tbody>
     </table>
 
