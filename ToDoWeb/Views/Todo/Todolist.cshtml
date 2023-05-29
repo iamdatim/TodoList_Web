@@ -1,9 +1,11 @@
 ﻿@model IEnumerable<ToDoWeb.Models.Todo>
+
 <div class="row p-3" id="todo-table-header">
     <div class="col-6" style="margin-bottom: -12px;">
         <h4>Available Todo Items</h4>
     </div>
 
+    <br />
     <div class="col-6 text-end">
         @*<button type="button" class="btn btn-info"> <i class="bi bi-plus-circle"></i> &nbsp; Create New Todo</button>*@
         <a type="button" class="btn btn-outline-primary" class="nav-link" asp-area="" asp-controller="Todo" asp-action="Create"><i class="bi bi-plus-circle"></i> &nbsp; Create New Todo</a>
@@ -12,60 +14,76 @@
 
 <div class="text-center">
 
-    <table class="table table-hover">
-        <thead>
-            <tr class="table-dark">
-                <th style="width: 5%" scope="col">Id</th>
-                <th style="width: 15%" scope="col">Title</th>
-                <th style="width: 35%" scope="col">Description</th>
-                <th style="width: 10%" scope="col">Due Date</th>
-                <th style="width: 15%" scope="col">Priority Level</th>
-                <th style="width: 20%" scope="col"></th>
-            </tr>
-        </thead>
+    @{
+        @if (!Model.Any())
+        {
+            <br />
+            <h3 class="text-danger">You do not have any available todo item</h3>
+        }
 
-        <tbody>
+        else
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <th style="width: 5%" scope="col">Id</th>
+                        <th style="width: 15%" scope="col">Title</th>
+                        <th style="width: 35%" scope="col">Description</th>
+                        <th style="width: 10%" scope="col">Due Date</th>
+                        <th style="width: 15%" scope="col">Priority Level</th>
+                        <th style="width: 20%" scope="col"></th>
+                    </tr>
+                </thead>
 
-            @{
-                int counter = 1;
-            }
+                <tbody>
 
-            @foreach (var obj in Model)
-            {
-                <tr class="table-primary">
-                    <td width="5%">
-                        @counter
-                    </td>
+                    @{
+                        int counter = 1;
+                    }
 
-                    <td width="15%">
-                        @obj.Title
-                    </td>
+                    @foreach (var obj in Model)
+                    {
 
-                    <td width="35%">
-                        @obj.Description
-                    </td>
+                        <tr class="table-primary">
+                            <td width="5%">
+                                @counter
+                            </td>
 
-                    <td width="10%">
-                        @obj.DueDate.ToString("yyyy/MM/dd")
-                    </td>
+                            <td width="15%">
+                                @obj.Title
+                            </td>
 
-                    <td width="15%">
-                        @obj.PriorityLevel
-                    </td>
+                            <td width="35%">
+                                @obj.Description
+                            </td>
 
-                    <td width="20%">
-                        <a type="button" class="btn btn-outline-success btn-sm" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
-                        @*<a type="button" class="btn btn-outline-danger btn-sm" asp-action="Details" asp-route-id="@obj.Id">Details</a> |*@
-                        <a type="button" class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
-                    </td>
-                </tr>
+                            <td width="10%">
+                                @obj.DueDate.ToString("yyyy/MM/dd")
+                            </td>
 
-                counter++;
-            }
+                            <td width="15%">
+                                @obj.PriorityLevel
+                            </td>
+
+                            <td width="20%">
+                                <a type="button" class="btn btn-outline-success btn-sm" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+                                @*<a type="button" class="btn btn-outline-danger btn-sm" asp-action="Details" asp-route-id="@obj.Id">Details</a> |*@
+                                <a type="button" class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
+                            </td>
 
 
-        </tbody>
-    </table>
+                        </tr>
 
+                        counter++;
+                    }
+
+
+                </tbody>
+            </table>
+
+        }
+    }
+
+    
 </div>
 
