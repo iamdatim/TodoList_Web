@@ -15,11 +15,12 @@
     <table class="table table-hover">
         <thead>
             <tr class="table-dark">
-                <th style="width: 10%" scope="col">Id</th>
-                <th style="width: 20%" scope="col">Title</th>
-                <th style="width: 45%" scope="col">Description</th>
+                <th style="width: 5%" scope="col">Id</th>
+                <th style="width: 15%" scope="col">Title</th>
+                <th style="width: 35%" scope="col">Description</th>
                 <th style="width: 10%" scope="col">Due Date</th>
                 <th style="width: 15%" scope="col">Priority Level</th>
+                <th style="width: 20%" scope="col"></th>
             </tr>
         </thead>
 
@@ -32,15 +33,15 @@
             @foreach (var obj in Model)
             {
                 <tr class="table-primary">
-                    <td width="10%">
+                    <td width="5%">
                         @counter
                     </td>
 
-                    <td width="20%">
+                    <td width="15%">
                         @obj.Title
                     </td>
 
-                    <td width="45%">
+                    <td width="35%">
                         @obj.Description
                     </td>
 
@@ -51,10 +52,11 @@
                     <td width="15%">
                         @obj.PriorityLevel
                     </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@obj.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@obj.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
+
+                    <td width="20%">
+                        <a type="button" class="btn btn-outline-success btn-sm" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+                        @*<a type="button" class="btn btn-outline-danger btn-sm" asp-action="Details" asp-route-id="@obj.Id">Details</a> |*@
+                        <a type="button" class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
                     </td>
                 </tr>
 
