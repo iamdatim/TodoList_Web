@@ -36,10 +36,7 @@
     </form>
 </div>*@
 
-@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
-{
-    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
-}
+
 
 @*<form method="post" action="/Login/Login">
     <div class="form-group">
@@ -53,24 +50,26 @@
     <button type="submit" class="btn btn-primary">Login</button>
 </form>*@
 
-
-
-<br />
 <div class="col bg-primary" id="login-grid2">
     <br />
     <h2 class="text-center text-dark"> USER LOGIN</h2>
     <br />
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <h5 style="width:75%; margin: 0 auto;" class="alert alert-danger">@ViewBag.ErrorMessage</h5>
+    }
+    
     <form method="post" action="/Login/Login">
-        <div class="text-center">
+        <div class="text-center mt-4">
             <label class="text-dark" for="username">Username:</label>
-            <input style="width: 25rem; border-radius: 40px; margin: 0 auto;" type="text" name="username" id="username" class="form-control" required />
+            <input style="width: 75%; border-radius: 40px; margin: 0 auto;" type="text" name="username" id="username" class="form-control" required />
         </div>
 
-        <br />
 
-        <div class="text-center">
+
+        <div class="text-center mt-2">
             <label class="text-dark" for="password">Password:</label>
-            <input style="width: 25rem; border-radius: 40px; margin: 0 auto;" type="password" name="password" id="password" class="form-control" required />
+            <input style="width: 75%; border-radius: 40px; margin: 0 auto;" type="password" name="password" id="password" class="form-control" required />
         </div>
 
         <br />
