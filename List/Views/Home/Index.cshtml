@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<List.Models.Todo>
+
+    @inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <h1>Welcome, @User.Identity.Name!</h1>
+    }
+
+    else
+    {
+        <div class="text-center mt-3">
+            <img class="mt-4" src="https://i.pinimg.com/originals/52/6a/bf/526abf16cc3e74882fa7304abc0f841c.png" alt="Registartion Icon" width="150" height="150">
+            <h1 id="header-text">Datim To Do</h1>
+            <p class="lead mt-4">
+                Datim ToDo make it simple and easy to manage and organize your workload  <br>
+                more effectively and efficiently
+            </p>
+            <div class="mt-4">
+                <a type="button" class="btn btn-primary btn-lg" class="nav-link" asp-area="Identity" asp-page="/Account/Register">Start For Free</a>
+            </div>
+        </div>
+
+        <br />
+        <br />
+    }
+}
