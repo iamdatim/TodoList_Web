@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DvJz28FHAbxteakg9kzBc3jrKKeW6z1aCrbEw8+JfIbI6qzwJlccwqE4dqi25KuOHV9t7/1e2rDABHgf13Xjuw==",
+  "dgSpecHash": "0bHhZcUfcI8RgpJqBB9/CgmgluF6x5v48L/TddQqGsPmjdD8clXjCLJS4cyuVtqh6iZnQVq5GKj5DKSVcnBVcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dairo.T\\Desktop\\mvc\\List\\List\\List.csproj",
+  "projectFilePath": "C:\\Users\\Dairo.T\\Desktop\\Datim\\List\\List.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dairo.T\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Dairo.T\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

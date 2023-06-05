@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace List.Models
 {
@@ -13,5 +14,6 @@ namespace List.Models
         public DateTime Duedate { get; set; }
         public string PriorityLevel { get; set; }
         public bool IsComplete { get; set; }
+        //public Guid UserId { get; set; }
     }
 }

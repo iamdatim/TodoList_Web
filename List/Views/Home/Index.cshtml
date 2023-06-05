@@ -1,8 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @model IEnumerable<List.Models.Todo>
 
-    @inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+@*@inject UserManager<ApplicationUser> UserManager*@
+
 
 @{
     ViewData["Title"] = "Home Page";
@@ -13,7 +14,34 @@
 @{
     if (User.Identity.IsAuthenticated)
     {
-        <h1>Welcome, @User.Identity.Name!</h1>
+        <div class="text-center mt-5">
+            <h1>Welcome, @User.Identity.Name!</h1>
+        </div>
+
+
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" checked="" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck1">  <a class="nav-link text-light" asp-area="" asp-controller="Todo" asp-action="Index">TodoList</a></label>
+
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck1">    <a class="nav-link text-light" asp-controller="Todo" asp-action="Create">Create New</a></label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck3">Checkbox 3</label>
+            </div>
+        </div>
+
+
+        //var user = await UserManager.GetUserAsync(User);
+        //var userName = user != null ? user.FirstName : string.Empty;
+
+
+
+        //<p>
+        //    Welcome, <strong>@userName</strong>!
+        //    <a asp-action="Create">Create New</a>
+        //</p>
     }
 
     else

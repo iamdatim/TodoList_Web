@@ -1,11 +1,13 @@
 using List.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using List.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 
 //added by me
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
