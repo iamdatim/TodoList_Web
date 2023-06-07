@@ -14,23 +14,31 @@
 @{
     if (User.Identity.IsAuthenticated)
     {
-        <div class="text-center mt-5">
-            <h1>Welcome, @User.Identity.Name!</h1>
-        </div>
-
-
-        <div class="text-center">
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                <input type="checkbox" class="btn-check" id="btncheck1" checked="" autocomplete="off">
-                <label class="btn btn-primary" for="btncheck1">  <a class="nav-link text-light" asp-area="" asp-controller="Todo" asp-action="Index">TodoList</a></label>
-
-                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                <label class="btn btn-primary" for="btncheck1">    <a class="nav-link text-light" asp-controller="Todo" asp-action="Create">Create New</a></label>
-
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                <label class="btn btn-primary" for="btncheck3">Checkbox 3</label>
+        
+        <div class="text-center bg-primary" style="width: 70vw; height: 65vh; margin: 0 auto;">
+            <div class="text-center mt-3 bg-dark" style="width: 70vw; height: 10vh;">
+                <h4 class="text-light mt-3">Welcome, @User.Identity.Name!</h4>
             </div>
+
+            <div class="mt-3">
+                <a class="btn btn-light" style="width: 30vw; height: 20vh; margin-right: 1rem; font-size: 18px" asp-area="" asp-controller="Todo" asp-action="Index">View Todo</a>
+                <a class="btn btn-light" style="width: 30vw; height: 20vh; font-size: 18px" asp-controller="Todo" asp-action="Create">Create New Todo</a>
+            </div>
+
         </div>
+
+        //<div class="text-center">
+        //    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        //        <input type="checkbox" class="btn-check" id="btncheck1" checked="" autocomplete="off">
+        //        <label class="btn btn-primary" for="btncheck1">  <a class="nav-link text-light" asp-area="" asp-controller="Todo" asp-action="Index">TodoList</a></label>
+
+        //        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+        //        <label class="btn btn-primary" for="btncheck1">    <a class="nav-link text-light" asp-controller="Todo" asp-action="Create">Create New</a></label>
+
+        //        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+        //        <label class="btn btn-primary" for="btncheck3">Checkbox 3</label>
+        //    </div>
+        //</div>
 
 
         //var user = await UserManager.GetUserAsync(User);
