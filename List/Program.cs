@@ -27,28 +27,6 @@ builder.Services.AddScoped<IUserTodoManagement, UserTodoManagement>();
 //    .AddDefaultTokenProviders();
 
 
-//builder.Services.AddAuthentication().AddFacebook(option =>
-//{
-//    option.AppId = "207279442225172";
-//    option.AppSecret = "c00622464458b094a08c78978850340e";
-//});
-
-
-
-builder.Services.AddAuthentication()
-    ////.AddMicrosoftAccount(microsoftOptions => { ... })
-    //.AddGoogle(googleOptions =>
-    //{
-    //    googleOptions.ClientId = Configuration["522810625113-0d9a1hfe5lnailku2si47tsfihphiag7.apps.googleusercontent.com"];
-    //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-    //})
-    //.AddTwitter(twitterOptions => { ... })
-    .AddFacebook(facebookOptions =>
-    {
-        facebookOptions.AppId = "207279442225172";
-        facebookOptions.AppSecret = "c00622464458b094a08c78978850340e";
-    });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
