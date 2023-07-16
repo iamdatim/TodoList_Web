@@ -2,6 +2,9 @@ using List.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using List.Models;
+using Microsoft.CodeAnalysis.Options;
+using List.Repository.Interface;
+using List.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,34 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.AddScoped<IUserTodoManagement, UserTodoManagement>();
+
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//    .AddEntityFrameworkStores<ApplicationDbContext>()
+//    .AddDefaultTokenProviders();
+
+
+//builder.Services.AddAuthentication().AddFacebook(option =>
+//{
+//    option.AppId = "207279442225172";
+//    option.AppSecret = "c00622464458b094a08c78978850340e";
+//});
+
+
+
+builder.Services.AddAuthentication()
+    ////.AddMicrosoftAccount(microsoftOptions => { ... })
+    //.AddGoogle(googleOptions =>
+    //{
+    //    googleOptions.ClientId = Configuration["522810625113-0d9a1hfe5lnailku2si47tsfihphiag7.apps.googleusercontent.com"];
+    //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+    //})
+    //.AddTwitter(twitterOptions => { ... })
+    .AddFacebook(facebookOptions =>
+    {
+        facebookOptions.AppId = "207279442225172";
+        facebookOptions.AppSecret = "c00622464458b094a08c78978850340e";
+    });
 
 var app = builder.Build();
 
@@ -28,7 +59,7 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
+app.UseAuthentication(); ;
 
 app.UseAuthorization();
 
@@ -38,5 +69,10 @@ app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//app.MapControllerRoute(
+//        name: "filteredTasks",
+//        pattern: "Task/FilteredTasks",
+//        defaults: new { controller = "Task", action = "FilteredTasks" });
 
 app.Run();

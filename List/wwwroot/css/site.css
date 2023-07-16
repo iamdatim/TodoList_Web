@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 html {
   font-size: 14px;
@@ -17,10 +18,49 @@ html {
 
 body {
   margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 #ForgetPassword{
     text-decoration: none;
     font-size: 12px;
     font-weight:bold;
+}
+
+.input-control{
+    font-size: 16px;
+    height: 6vh;
+}
+
+.validation-span{
+    font-size: 11px;
+}
+
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+#footer-container{
+    width: 100%;
+    padding: 0!important;
+   
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+.table-font-size{
+    font-size: 11px;
 }

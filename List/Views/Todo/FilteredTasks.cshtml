@@ -1,0 +1,109 @@
+﻿@model IEnumerable<List.Models.Todo>
+
+
+
+
+@{
+    int counter = 1;
+    bool hasTodos = Model.Any();
+}
+
+
+@if (Model.Any())
+{
+    <div class="d-flex justify-content-between mt-4">
+        @*<div class="btn-group" style="width: 15vw;" role="group" aria-label="Button group with nested dropdown">
+    <button type="button" class="btn btn-primary">Sort By</button>
+    <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle show" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+    <div class="dropdown-menu show" aria-labelledby="btnGroupDrop1" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40.6667px, 0px);">
+    <a class="text-light" style="text-decoration: none; font-weight: bold;" asp-action="Index" asp-controller="Todo" asp-route-sortBy="DueDate">   Due Date</a> |
+    <a class="text-light" style="text-decoration: none; font-weight: bold;" asp-action="Index" asp-controller="Todo" asp-route-sortBy="Priority">Priority Level</a> |
+    <a class="text-light" style="text-decoration: none; font-weight: bold;" asp-action="Index" asp-controller="Todo" asp-route-sortBy="IsComplete">Is Complete</a>
+
+    </div>
+    </div>
+    </div>*@
+
+
+        @using (Html.BeginForm("FilteredTasks", "Todo", FormMethod.Get))
+        {
+            <div class="btn-group" style="width: 15vw;">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort By
+                </button>
+                <div class="dropdown-menu">
+                    <a href="@Url.Action("FilteredTasks", new { sortBy = "DueDate" })" class="dropdown-item">Due Date</a>
+                    <a href="@Url.Action("FilteredTasks", new { sortBy = "Priority" })" class="dropdown-item">Priority Level</a>
+                    <a href="@Url.Action("FilteredTasks", new { sortBy = "IsComplete" })" class="dropdown-item">Is Complete</a>
+                </div>
+            </div>
+        }
+
+
+
+        <a type="button" class="btn btn-outline-primary" class="nav-link" asp-area="" asp-controller="Todo" asp-action="Create"><i class="bi bi-plus-circle"></i> &nbsp; Create New Todo</a>
+    </div>
+
+    <table class="table table-hover table-bordered mt-2">
+        <thead>
+            <tr class="table-dark">
+                <th style="width: 5%" class="table-font-size" scope="col">Id</th>
+                <th style="width: 10%" class="table-font-size" scope="col">Title</th>
+                <th style="width: 30%" class="table-font-size" scope="col">Description</th>
+                <th style="width: 10%" class="table-font-size" scope="col">Due Date</th>
+                <th style="width: 12%" class="table-font-size" scope="col">Priority Level</th>
+                <th style="width: 8%" class="table-font-size" scope="col">Completed</th>
+                <th style="width: 20%" class="table-font-size" scope="col"></th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td class="table-font-size" width="5%">
+                        @counter
+                    </td>
+
+                    <td class="table-font-size" width="10%">
+                        @obj.Title
+                    </td>
+
+                    <td class="table-font-size" width="30%">
+                        @obj.Description
+                    </td>
+
+                    <td class="table-font-size" width="10%">
+                        @obj.Duedate.ToShortDateString()
+                    </td>
+
+                    <td class="table-font-size" width="10%">
+                        @obj.PriorityLevel
+                    </td>
+
+                    <td class="table-font-size" width="10%">
+                        @(obj.IsComplete ? "Yes" : "No")
+                    </td>
+                    <td width="15%">
+                        <a class="btn btn-primary btn-sm table-font-size" asp-action="Edit" asp-route-id="@obj.Id">Edit</a>
+                        <a class="btn btn-success btn-sm table-font-size" asp-action="Details" asp-route-id="@obj.Id">Details</a>
+                        <a class="btn btn-danger btn-sm table-font-size" asp-action="Delete" asp-route-id="@obj.Id">Delete</a>
+                    </td>
+                </tr>
+
+                counter++;
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+}
+
+
+else
+{
+    <p>No tasks found.</p>
+}
